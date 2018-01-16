@@ -18,7 +18,10 @@ namespace Positions {
             _data = source;
         }
         if (sourceFileName != 0) {
-            this->_sourceFileName = sourceFileName;
+            const size_t len = strlen(sourceFileName) + 1;
+            char* sourceStore = new char(len);
+            strncpy(sourceStore, sourceFileName, len);
+            _sourceFileName = sourceStore;
         }
     }
 
@@ -32,6 +35,7 @@ namespace Positions {
         }
         if (_sourceFileName != 0) {
             _sourceFileName = 0;
+            delete []_sourceFileName;
         }
     }
 
