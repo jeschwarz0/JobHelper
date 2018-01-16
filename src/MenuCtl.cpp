@@ -49,7 +49,8 @@ namespace MenuCtl {
             if (in != 0) {
                 iter = datfls.begin();
                 std::advance(iter, in - 1);
-                strcpy(rval, *iter);
+                rval = new char[strlen(*iter) + 1];
+                strncpy(rval, *iter, strlen(*iter) + 1);
             } else rval = 0;
         } else rval = 0;
         return rval;
@@ -74,8 +75,9 @@ namespace MenuCtl {
     void init(list<PosPtr>& lRecords) {
         // Load from individual or all files
         if (getFlag(opChooseFile)) {
-            const char* fn = getInputFileName(" "); //TODO: Fix seg fault caused by getInputFileName()
+            const char* fn = getInputFileName(" ");
             if (fn != 0) JsonLoader::LoadDataFile(fn, lRecords);
+            delete[] fn;
         } else {
             lRecords = JsonLoader::LoadDataDir();
         }
@@ -181,7 +183,8 @@ namespace MenuCtl {
         if (getFlag(opNoMenu)) {
             listOutput(lPositions);
         } else {//  #Run menu W/Blacklist#
-            ostream* pCLOut = (getFlag(opWriteToFile) ? new ofstream(strcat(getenv("home"), "coverletters.txt"), ios::out | ios::app) : &cout);
+            
+            ostream* pCLOut = (getFlag(opWriteToFile) ? new ofstream(strncat(getenv("home"), "coverletters.txt", strlen(getenv("home")) + strlen("coverletters.txt") + 1), ios::out | ios::app) : &cout);
             menu(lPositions, pCLOut); // Show Menu
             if (getFlag(opWriteToFile))// Close output file/cover letters
                 (*(ofstream*) pCLOut).close();

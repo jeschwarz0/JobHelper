@@ -21,7 +21,7 @@ using Positions::JobAPIPosition;
 using Positions::Position;
 
 namespace JsonLoader {
-    char* DATA_DIR = strcat(getenv("HOME"), "/.jobhelper/data/");
+    const std::string DATA_DIR = std::string(getenv("HOME")) + "/.jobhelper/data/";
     const std::string EMPTY_STRING = "";
 
     JAPosition_t* loadPositionFromNode(ptree tree);
@@ -35,7 +35,7 @@ namespace JsonLoader {
     void ListDataFiles(list<const char*>& target) {
         struct dirent** files;
         short count =
-                scandir(DATA_DIR, &files, NULL, alphasort);
+                scandir(DATA_DIR.c_str(), &files, NULL, alphasort);
 
         for (unsigned short int i = 0; i < count; i++) {
             if (!strstr(files[i]->d_name, ".json") == 0){
@@ -54,7 +54,7 @@ namespace JsonLoader {
 
     void LoadDataFile(const char* filename, std::list<Position*>& collection) {
         ptree result;
-        string fullpath (DATA_DIR);
+        string fullpath (DATA_DIR.c_str());
         fullpath.append(filename);
         read_json(fullpath.c_str(), result);
         try {
@@ -74,7 +74,7 @@ namespace JsonLoader {
     void processDataDir(std::list<Position*>& collection) {
         struct dirent** files;
         short count =
-                scandir(DATA_DIR, &files, NULL, alphasort);
+                scandir(DATA_DIR.c_str(), &files, NULL, alphasort);
 
         for (unsigned short int i = 0; i < count; i++) {
             if (!strstr(files[i]->d_name, ".json") == 0)
