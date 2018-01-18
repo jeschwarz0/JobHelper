@@ -21,7 +21,7 @@ using Positions::JobAPIPosition;
 using Positions::Position;
 
 namespace JsonLoader {
-    const std::string DATA_DIR = std::string(getenv("HOME")) + "/.jobhelper/data/";
+    const std::string DATA_DIR = std::string(getenv("HOME")) + "/.cache/jobhelper/";
     const std::string EMPTY_STRING = "";
 
     JAPosition_t* loadPositionFromNode(ptree tree);
