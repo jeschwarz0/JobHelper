@@ -37,7 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/src/BitLoader.o \
 	${OBJECTDIR}/src/JobAPIPosition.o \
-	${OBJECTDIR}/src/JsonLoader.o \
+	${OBJECTDIR}/src/JobApisLoader.o \
 	${OBJECTDIR}/src/MenuCtl.o \
 	${OBJECTDIR}/src/Position.o \
 	${OBJECTDIR}/src/PositionAnalyzer.o \
@@ -79,10 +79,10 @@ ${OBJECTDIR}/src/JobAPIPosition.o: src/JobAPIPosition.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/JobAPIPosition.o src/JobAPIPosition.cpp
 
-${OBJECTDIR}/src/JsonLoader.o: src/JsonLoader.cpp
+${OBJECTDIR}/src/JobApisLoader.o: src/JobApisLoader.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/JsonLoader.o src/JsonLoader.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/JobApisLoader.o src/JobApisLoader.cpp
 
 ${OBJECTDIR}/src/MenuCtl.o: src/MenuCtl.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

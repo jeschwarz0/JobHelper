@@ -12,7 +12,7 @@
 #include <sstream>
 
 #include "BitLoader.h" // For Bit Definitions
-#include "JsonLoader.h"
+#include "JobApisLoader.h"
 #include "JobAPIPosition.h"
 
 using namespace std;
@@ -25,13 +25,13 @@ namespace MenuCtl {
     typedef Position* PosPtr;
 
     void sysInit(int* argc, char** argv) {
-        JsonLoader::pathCheck(); // Sync path with system
+        JobApisLoader::pathCheck(); // Sync path with system
         loadFlags(argc, argv); // Load the starting flags
     }
 
     const char* getInputFileName(const char* PFX = "\\|") {
         list<const char*> datfls;
-        JsonLoader::ListDataFiles(datfls);
+        JobApisLoader::ListDataFiles(datfls);
         char* rval;
 
         if (datfls.size() > 0) {
@@ -76,10 +76,10 @@ namespace MenuCtl {
         // Load from individual or all files
         if (getFlag(opChooseFile)) {
             const char* fn = getInputFileName(" ");
-            if (fn != 0) JsonLoader::LoadDataFile(fn, lRecords);
+            if (fn != 0) JobApisLoader::LoadDataFile(fn, lRecords);
             delete[] fn;
         } else {
-            lRecords = JsonLoader::LoadDataDir();
+            lRecords = JobApisLoader::LoadDataDir();
         }
         if (getFlag(opSort))
             lRecords.sort();

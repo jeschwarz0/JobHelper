@@ -1,16 +1,16 @@
 /* 
- * File:   JsonLoader.h
+ * File:   JobApisLoader.h
  * Author: Jesse Schwarz
  * 
  * Created on January 15, 2018, 7:22 PM
  */
-#ifndef PARSEUTILS_H
-#define PARSEUTILS_H
+#ifndef JOBAPISL_H
+#define JOBAPISL_H
 
 #include <list>
 #include "Position.h"
 
-namespace JsonLoader {
+namespace JobApisLoader {
     void pathCheck();
     void ListDataFiles(std::list<const char*>& target);
     std::list<Positions::Position*> LoadDataDir();

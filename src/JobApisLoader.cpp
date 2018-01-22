@@ -1,5 +1,5 @@
 /* 
- * File:   JsonLoader.cpp
+ * File:   JobApisLoader.cpp
  * Author: Jesse Schwarz
  * 
  * Created on January 15, 2018, 7:22 PM
@@ -20,7 +20,7 @@ using std::list;
 using Positions::JobAPIPosition;
 using Positions::Position;
 
-namespace JsonLoader {
+namespace JobApisLoader {
     const std::string DATA_DIR = std::string(getenv("HOME")) + "/.cache/jobhelper/";
     const std::string EMPTY_STRING = "";
 

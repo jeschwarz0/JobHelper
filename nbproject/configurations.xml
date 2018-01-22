@@ -7,7 +7,7 @@
       <itemPath>src/BitLoader.h</itemPath>
       <itemPath>src/JAPosition.h</itemPath>
       <itemPath>src/JobAPIPosition.h</itemPath>
-      <itemPath>src/JsonLoader.h</itemPath>
+      <itemPath>src/JobApisLoader.h</itemPath>
       <itemPath>src/MenuCtl.h</itemPath>
       <itemPath>src/Position.h</itemPath>
       <itemPath>src/PositionAnalyzer.h</itemPath>
@@ -22,7 +22,7 @@
                    projectFiles="true">
       <itemPath>src/BitLoader.cpp</itemPath>
       <itemPath>src/JobAPIPosition.cpp</itemPath>
-      <itemPath>src/JsonLoader.cpp</itemPath>
+      <itemPath>src/JobApisLoader.cpp</itemPath>
       <itemPath>src/MenuCtl.cpp</itemPath>
       <itemPath>src/Position.cpp</itemPath>
       <itemPath>src/PositionAnalyzer.cpp</itemPath>
@@ -70,9 +70,9 @@
       </item>
       <item path="src/JobAPIPosition.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/JsonLoader.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/JobApisLoader.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/JsonLoader.h" ex="false" tool="3" flavor2="0">
+      <item path="src/JobApisLoader.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/MenuCtl.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -123,9 +123,9 @@
       </item>
       <item path="src/JobAPIPosition.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/JsonLoader.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/JobApisLoader.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/JsonLoader.h" ex="false" tool="3" flavor2="0">
+      <item path="src/JobApisLoader.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/MenuCtl.cpp" ex="false" tool="1" flavor2="0">
       </item>
