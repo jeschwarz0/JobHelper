@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/src/BitLoader.o \
+	${OBJECTDIR}/src/ConfigLoader.o \
 	${OBJECTDIR}/src/JobAPIPosition.o \
 	${OBJECTDIR}/src/JobApisLoader.o \
 	${OBJECTDIR}/src/MenuCtl.o \
@@ -73,6 +74,11 @@ ${OBJECTDIR}/src/BitLoader.o: src/BitLoader.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/BitLoader.o src/BitLoader.cpp
+
+${OBJECTDIR}/src/ConfigLoader.o: src/ConfigLoader.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ConfigLoader.o src/ConfigLoader.cpp
 
 ${OBJECTDIR}/src/JobAPIPosition.o: src/JobAPIPosition.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

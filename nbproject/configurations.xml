@@ -5,12 +5,14 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>src/BitLoader.h</itemPath>
+      <itemPath>src/ConfigLoader.h</itemPath>
       <itemPath>src/JAPosition.h</itemPath>
       <itemPath>src/JobAPIPosition.h</itemPath>
       <itemPath>src/JobApisLoader.h</itemPath>
       <itemPath>src/MenuCtl.h</itemPath>
       <itemPath>src/Position.h</itemPath>
       <itemPath>src/PositionAnalyzer.h</itemPath>
+      <itemPath>src/UserConfig.h</itemPath>
       <itemPath>src/autoCL.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -21,6 +23,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>src/BitLoader.cpp</itemPath>
+      <itemPath>src/ConfigLoader.cpp</itemPath>
       <itemPath>src/JobAPIPosition.cpp</itemPath>
       <itemPath>src/JobApisLoader.cpp</itemPath>
       <itemPath>src/MenuCtl.cpp</itemPath>
@@ -64,6 +67,10 @@
       </item>
       <item path="src/BitLoader.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/ConfigLoader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ConfigLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/JAPosition.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/JobAPIPosition.cpp" ex="false" tool="1" flavor2="0">
@@ -85,6 +92,8 @@
       <item path="src/PositionAnalyzer.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/PositionAnalyzer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/UserConfig.h" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/autoCL.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -117,6 +126,10 @@
       </item>
       <item path="src/BitLoader.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/ConfigLoader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ConfigLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/JAPosition.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/JobAPIPosition.cpp" ex="false" tool="1" flavor2="0">
@@ -138,6 +151,8 @@
       <item path="src/PositionAnalyzer.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/PositionAnalyzer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/UserConfig.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/autoCL.cpp" ex="false" tool="1" flavor2="0">
       </item>
