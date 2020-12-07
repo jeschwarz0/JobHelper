@@ -18,7 +18,7 @@ We use git for versioning.
 
 ## License
 
-None
+[MIT](LICENSE)
 
 ## Acknowledgments
 
